@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Uptime Monitoring — ITVR Technology</title>
+<meta name="description" content="Uptime Monitoring by ITVR Technology: a self-hosted uptime, database and server monitoring dashboard with status pages, alerts, SSL tracking, dark mode and branding."/>
+<link rel="icon" type="image/png" href="../assets/itvr-logo.png"/>
+<link rel="stylesheet" href="../styles.css"/>
+<script>(function(){try{if((localStorage.getItem('itvr-theme')||'light')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html" aria-label="ITVR Technology home">
+      <img src="../assets/itvr-logo.png" data-logo="1" alt="ITVR Technology" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"/>
+      <span class="brand-fallback" style="display:none">ITVR Technology</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#products">Products</a>
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#download">Download</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-btn" onclick="toggleTheme()" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
+      <a class="btn btn-primary btn-sm" href="#download">Get it</a>
+    </div>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<!-- HERO -->
+<section class="section">
+  <div class="container">
+    <a class="back-link" href="../index.html#products">← All products</a>
+    <div style="text-align:center">
+      <div class="eyebrow" style="display:inline-block;font-size:13px;font-weight:700;color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent);padding:6px 14px;border-radius:20px;margin-bottom:18px">Uptime Monitoring · Available now</div>
+      <h1 style="font-size:clamp(30px,4.5vw,48px);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin-bottom:16px">Know the moment something goes down.</h1>
+      <p class="lead" style="max-width:660px;margin:0 auto 28px;color:var(--text2);font-size:18px">
+        A lightweight, self-hosted monitoring dashboard for your web apps, APIs, databases
+        and servers — with status pages, email alerts, SSL tracking, dark mode, and branding
+        you can make your own.
+      </p>
+      <div class="hero-cta" style="margin-bottom:40px">
+        <a class="btn btn-primary btn-lg" href="#download">Download</a>
+        <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
+      </div>
+    </div>
+    <figure class="screenshot">
+      <div class="browser-bar"><span></span><span></span><span></span></div>
+      <img src="../assets/dashboard.png" alt="Uptime Monitoring dashboard showing live monitor status, uptime, latency and heartbeat timeline" loading="lazy"/>
+    </figure>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Everything you need to keep an eye on things</h2>
+    <p class="section-sub">One dashboard for uptime, databases, servers and certificates — without the enterprise price tag.</p>
+    <div class="feature-grid">
+      <div class="fcard"><div class="ico">🌐</div><h3>Uptime monitoring</h3><p>HTTP/HTTPS, TCP port and keyword checks with retries, latency tracking and per-service history.</p></div>
+      <div class="fcard"><div class="ico">🗄️</div><h3>Database monitoring</h3><p>Live checks for SQL Server and PostgreSQL — connection health plus active, running and blocking queries.</p></div>
+      <div class="fcard"><div class="ico">🖥️</div><h3>Server &amp; software inventory</h3><p>Lightweight agents report CPU, RAM, disk, uptime, patch status and installed software per server.</p></div>
+      <div class="fcard"><div class="ico">🔒</div><h3>SSL certificate tracking</h3><p>See which certificates are healthy, expiring soon, or critical — before they catch you out.</p></div>
+      <div class="fcard"><div class="ico">📊</div><h3>Status pages</h3><p>Share clean public status pages with stakeholders, grouped by application, with uptime history.</p></div>
+      <div class="fcard"><div class="ico">✉️</div><h3>Smart alerts</h3><p>Email alerts on status changes, routed to different teams for monitors, servers, software and patches.</p></div>
+      <div class="fcard"><div class="ico">🎨</div><h3>Your branding</h3><p>Set your own app name, subtitle and logo from the settings — dashboard, login and status pages.</p></div>
+      <div class="fcard"><div class="ico">🌙</div><h3>Light &amp; dark mode</h3><p>A polished interface that's easy on the eyes, whether on a wall display or late-night on-call.</p></div>
+      <div class="fcard"><div class="ico">👥</div><h3>Role-based access</h3><p>Admin, viewer and database-only roles so the right people see the right things.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="section">
+  <div class="container">
+    <h2 class="section-title">Up and running in four steps</h2>
+    <p class="section-sub">No install, no setup files — just download and run.</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h3>Download &amp; unzip</h3><p>Grab the package and unzip <code>UptimeMonitor.exe</code> into a folder of its own.</p></div>
+      <div class="step"><div class="step-num">2</div><h3>Run it</h3><p>Double-click the app. Your browser opens automatically and an icon appears in your system tray.</p></div>
+      <div class="step"><div class="step-num">3</div><h3>Create your admin</h3><p>On first run, set your admin username and password right in the browser — no config files.</p></div>
+      <div class="step"><div class="step-num">4</div><h3>Add monitors</h3><p>Set your branding, then add your first monitors, servers and status pages.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section id="download" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Get Uptime Monitoring</h2>
+    <p class="section-sub">Free to download and run on your own infrastructure.</p>
+
+    <div class="download-box">
+      <div class="download-left">
+        <div class="ico-lg">📦</div>
+        <div>
+          <h3>Uptime Monitoring <span class="ver">v1.0 · Windows</span></h3>
+          <p class="muted">Windows 10/11 · no install needed · runs in the system tray · ~24 MB</p>
+        </div>
+      </div>
+      <a class="btn btn-primary btn-lg" href="#" onclick="return startDownload()">Download</a>
+    </div>
+
+    <div class="tabs">
+      <div class="tab-head" role="tablist">
+        <button class="tab-btn active" data-tab="win" onclick="showTab('win')" role="tab">🪟 Windows</button>
+        <button class="tab-btn" data-tab="linux" onclick="showTab('linux')" role="tab">🐧 Linux · soon</button>
+      </div>
+
+      <div class="tab-panel active" data-tab="win">
+        <ol class="install">
+          <li>Unzip the download and put <code>UptimeMonitor.exe</code> in a folder of its own, e.g. <code>C:\UptimeMonitor</code>. No Python or install needed.</li>
+          <li>Double-click <code>UptimeMonitor.exe</code>. Your browser opens automatically at <code>http://localhost:5000</code>.</li>
+          <li>On first run, <strong>create your admin account</strong> right in the browser — choose a username and password.</li>
+          <li>You're in. Go to <strong>Settings → About → Branding</strong> to set your own name and logo.</li>
+        </ol>
+        <span class="note">Your data (database + keys) is saved next to the .exe — keep it in a writable folder and back those files up.</span>
+      </div>
+
+      <div class="tab-panel" data-tab="linux">
+        <div style="text-align:center;padding:24px 10px">
+          <div style="font-size:40px;margin-bottom:12px">🐧</div>
+          <h3 style="font-size:20px;margin-bottom:8px">Linux — Coming soon</h3>
+          <p style="color:var(--text2);max-width:460px;margin:0 auto 18px">
+            A native Linux package (RPM/DEB) is on the way for easy install on your servers.
+            Want to be notified when it's ready?
+          </p>
+          <a class="btn btn-ghost" href="mailto:info@itvrtechnology.co.za?subject=Uptime%20Monitoring%20for%20Linux">Notify me</a>
+        </div>
+      </div>
+    </div>
+    <p class="muted center" style="margin-top:18px">
+      Keep your <code>secret.key</code> and <code>encryption.key</code> safe and backed up — the latter decrypts stored database credentials.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <a class="brand" href="../index.html">
+      <img src="../assets/itvr-logo.png" data-logo="1" alt="ITVR Technology" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"/>
+      <span class="brand-fallback" style="display:none">ITVR Technology</span>
+    </a>
+    <p class="muted">© <span data-year></span> ITVR Technology · itvrtechnology.co.za</p>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ITVR Technology — We build practical software that makes business better</title>
+<meta name="description" content="ITVR Technology builds practical software that makes business better. Products include Uptime Monitoring and (coming soon) a Gateway application."/>
+<link rel="icon" type="image/png" href="assets/itvr-logo.png"/>
+<link rel="stylesheet" href="styles.css"/>
+<script>(function(){try{if((localStorage.getItem('itvr-theme')||'light')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top" aria-label="ITVR Technology home">
+      <img src="assets/itvr-logo.png" data-logo="1" alt="ITVR Technology" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"/>
+      <span class="brand-fallback" style="display:none">ITVR Technology</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#products">Products</a>
+      <a href="#why">Why us</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-btn" onclick="toggleTheme()" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
+      <a class="btn btn-primary btn-sm" href="#products">Our products</a>
+    </div>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">ITVR Technology</div>
+    <h1>We build practical software that<br><span class="grad">makes business better.</span></h1>
+    <p class="lead">
+      Real tools that solve real problems — built to be simple to run, easy to own,
+      and genuinely useful to the teams who use them every day.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-primary btn-lg" href="#products">Explore our products</a>
+      <a class="btn btn-ghost btn-lg" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why" class="section">
+  <div class="container">
+    <h2 class="section-title">Software that earns its place</h2>
+    <p class="section-sub">We don't build for the brochure. We build the tools teams actually reach for.</p>
+    <div class="values">
+      <div class="value">
+        <div class="ico">🎯</div>
+        <h3>Built for the real world</h3>
+        <p>Every product starts from an actual problem a team was living with — not a feature list.</p>
+      </div>
+      <div class="value">
+        <div class="ico">🪶</div>
+        <h3>Lightweight to run</h3>
+        <p>No heavy stacks or lock-in. Self-hosted, straightforward to deploy, and yours to control.</p>
+      </div>
+      <div class="value">
+        <div class="ico">🤝</div>
+        <h3>Made your own</h3>
+        <p>Rebrandable and configurable, so the software fits your business — not the other way around.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Our products</h2>
+    <p class="section-sub">A growing range of tools to help you run and secure your infrastructure.</p>
+    <div class="products">
+
+      <!-- Uptime Monitoring (live) -->
+      <article class="product">
+        <div class="product-top">
+          <div class="product-ico">📡</div>
+          <span class="badge live">Available now</span>
+        </div>
+        <div class="product-body">
+          <h3>Uptime Monitoring</h3>
+          <p>
+            A self-hosted monitoring dashboard for your web apps, APIs, databases and servers —
+            with status pages, email alerts, SSL tracking, dark mode and your own branding.
+          </p>
+          <div class="product-actions">
+            <a class="btn btn-primary" href="products/uptime.html">Learn more</a>
+            <a class="btn btn-ghost" href="products/uptime.html#download">Download</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Gateway (coming soon) -->
+      <article class="product disabled">
+        <div class="product-top">
+          <div class="product-ico">🛡️</div>
+          <span class="badge soon">Coming soon</span>
+        </div>
+        <div class="product-body">
+          <h3>Gateway</h3>
+          <p>
+            An API gateway application — route, secure and manage your APIs from one place.
+            A practical, self-hosted alternative in the spirit of tools like APISIX. In development now.
+          </p>
+          <div class="product-actions">
+            <a class="btn btn-ghost" href="products/gateway.html">Preview</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container about">
+    <div>
+      <h2>About ITVR Technology</h2>
+      <p>
+        ITVR Technology is an independent software company focused on building practical
+        applications that make businesses run better. We create tools that are lightweight,
+        self-hosted and simple to own — the kind of software teams are glad to have.
+      </p>
+      <p>
+        Our first product, <strong>Uptime Monitoring</strong>, grew out of a real need for a
+        clean, affordable way to watch infrastructure. Next up is our <strong>Gateway</strong>
+        application. More is on the way.
+      </p>
+    </div>
+    <div class="about-card">
+      <div class="tagline">"Your limitation — it's only your imagination."</div>
+      <div class="stat-row">
+        <div class="stat"><b>1</b><span>product live</span></div>
+        <div class="stat"><b>1</b><span>in development</span></div>
+        <div class="stat"><b>∞</b><span>ideas ahead</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Get in touch</h2>
+    <p class="section-sub">Questions, a demo, or help deploying something for your team? We'd love to hear from you.</p>
+    <div class="contact-cards">
+      <a class="contact-card" href="mailto:info@itvrtechnology.co.za">
+        <div class="ico">✉️</div><h3>Email</h3><p>info@itvrtechnology.co.za</p>
+      </a>
+      <a class="contact-card" href="https://itvrtechnology.co.za" target="_blank" rel="noopener">
+        <div class="ico">🌐</div><h3>Website</h3><p>itvrtechnology.co.za</p>
+      </a>
+      <a class="contact-card" href="#products">
+        <div class="ico">📦</div><h3>Products</h3><p>See what we've built</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <a class="brand" href="#top">
+      <img src="assets/itvr-logo.png" data-logo="1" alt="ITVR Technology" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"/>
+      <span class="brand-fallback" style="display:none">ITVR Technology</span>
+    </a>
+    <p class="muted">© <span data-year></span> ITVR Technology · itvrtechnology.co.za</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

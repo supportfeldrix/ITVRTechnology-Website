@@ -1,0 +1,199 @@
+/* ============================================================
+   ITVR Technology — company site styles (shared)
+   Palette built around the brand teal, with light/dark themes.
+   ============================================================ */
+:root{
+  --bg:#ffffff;
+  --bg-alt:#f4f7f8;
+  --surface:#ffffff;
+  --border:#e2e8ea;
+  --text:#14202a;
+  --text2:#45545f;
+  --text3:#8795a0;
+  --accent:#17c3b2;          /* brand teal (from logo) */
+  --accent2:#0ea5a0;
+  --accent-hover:#12a89a;
+  --ink:#1b2a33;             /* dark wordmark colour */
+  --green:#1a9e5c;
+  --red:#e53e3e;
+  --radius:14px;
+  --shadow:0 1px 3px rgba(0,0,0,.06),0 10px 30px rgba(0,0,0,.06);
+  --maxw:1140px;
+}
+[data-theme="dark"]{
+  --bg:#0d141a;
+  --bg-alt:#121c23;
+  --surface:#172028;
+  --border:#263440;
+  --text:#e8eef2;
+  --text2:#aab7c0;
+  --text3:#7a8893;
+  --accent:#2ad4c2;
+  --accent2:#22b9b0;
+  --accent-hover:#3ee0cf;
+  --ink:#e8eef2;
+  --green:#34d17f;
+  --red:#f26a6a;
+  --shadow:0 1px 3px rgba(0,0,0,.5),0 14px 36px rgba(0,0,0,.5);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+code{font-family:'SF Mono',Consolas,Menlo,monospace;font-size:.88em;background:var(--bg-alt);padding:2px 6px;border-radius:5px;border:1px solid var(--border)}
+pre{background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;padding:12px 14px;overflow-x:auto;margin:8px 0}
+pre code{background:none;border:none;padding:0;font-size:13px;line-height:1.7}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.muted{color:var(--text3)}
+.center{text-align:center}
+
+body::before{content:'';position:fixed;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--accent),#2b7de9);z-index:200}
+
+/* ── Buttons ── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;border-radius:10px;
+  cursor:pointer;border:1px solid transparent;transition:all .15s;white-space:nowrap;padding:10px 18px;font-size:15px}
+.btn-sm{padding:7px 14px;font-size:14px}
+.btn-lg{padding:14px 28px;font-size:16px}
+.btn-primary{background:var(--accent);color:#06211f;box-shadow:0 2px 12px rgba(23,195,178,.35)}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
+.btn-ghost{background:transparent;border-color:var(--border);color:var(--text)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ── Nav ── */
+.nav{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 85%,transparent);
+  backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:80px;gap:20px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{height:62px;width:auto;display:block}
+.brand-fallback{font-weight:800;font-size:18px;color:var(--ink);letter-spacing:.01em}
+/* In dark mode the logo's wordmark is dark, so sit it on a soft light chip for legibility */
+[data-theme="dark"] .brand img{background:#ffffff;border-radius:10px;padding:4px 8px}
+.nav-links{display:flex;gap:28px}
+.nav-links a{color:var(--text2);font-weight:500;font-size:15px;transition:color .15s}
+.nav-links a:hover{color:var(--accent)}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.theme-btn{background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;width:36px;height:36px;
+  cursor:pointer;font-size:16px;transition:all .15s}
+.theme-btn:hover{border-color:var(--accent)}
+
+/* ── Hero ── */
+.hero{padding:88px 0 72px;text-align:center;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(900px 380px at 50% -10%, color-mix(in srgb,var(--accent) 16%,transparent), transparent)}
+.hero .eyebrow{display:inline-block;font-size:13px;font-weight:700;color:var(--accent);
+  background:color-mix(in srgb,var(--accent) 14%,transparent);padding:6px 14px;border-radius:20px;margin-bottom:22px}
+.hero h1{font-size:clamp(34px,5.5vw,58px);line-height:1.06;font-weight:800;letter-spacing:-.02em;margin-bottom:20px}
+.hero h1 .grad{background:linear-gradient(90deg,var(--accent),#2b7de9);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{font-size:19px;color:var(--text2);max-width:640px;margin:0 auto 32px}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ── Sections ── */
+.section{padding:76px 0}
+.section-alt{background:var(--bg-alt)}
+.section-title{font-size:clamp(26px,3.5vw,38px);font-weight:800;text-align:center;letter-spacing:-.02em}
+.section-sub{text-align:center;color:var(--text2);font-size:17px;max-width:640px;margin:12px auto 48px}
+
+/* ── Value props ── */
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.value{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:26px}
+.value .ico{font-size:28px;margin-bottom:12px}
+.value h3{font-size:18px;margin-bottom:8px}
+.value p{color:var(--text2);font-size:15px}
+
+/* ── Products ── */
+.products{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.product{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);overflow:hidden;transition:transform .15s,box-shadow .15s}
+.product:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--accent) 40%,var(--border))}
+.product-top{padding:26px 26px 0;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.product-ico{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  font-size:26px;background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 22%,transparent),color-mix(in srgb,#2b7de9 20%,transparent))}
+.badge{font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:.04em}
+.badge.live{background:color-mix(in srgb,var(--green) 16%,transparent);color:var(--green)}
+.badge.soon{background:color-mix(in srgb,var(--text3) 18%,transparent);color:var(--text3)}
+.product-body{padding:16px 26px 26px;flex:1;display:flex;flex-direction:column}
+.product-body h3{font-size:21px;margin-bottom:8px}
+.product-body p{color:var(--text2);font-size:15px;margin-bottom:18px;flex:1}
+.product-actions{display:flex;gap:10px;flex-wrap:wrap}
+.product.disabled{opacity:.85}
+
+/* ── About ── */
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.about h2{font-size:clamp(24px,3vw,32px);font-weight:800;margin-bottom:16px;letter-spacing:-.01em}
+.about p{color:var(--text2);font-size:16px;margin-bottom:14px}
+.about-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+.about-card .tagline{font-size:15px;font-style:italic;color:var(--accent);margin-bottom:18px}
+.stat-row{display:flex;gap:22px;flex-wrap:wrap}
+.stat b{display:block;font-size:26px;font-weight:800;color:var(--text)}
+.stat span{font-size:13px;color:var(--text3)}
+
+/* ── Contact ── */
+.contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:780px;margin:0 auto}
+.contact-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:28px 20px;text-align:center;transition:transform .15s,border-color .15s}
+.contact-card:hover{transform:translateY(-3px);border-color:var(--accent)}
+.contact-card .ico{font-size:26px}
+.contact-card h3{font-size:16px;margin:10px 0 4px}
+.contact-card p{color:var(--text2);font-size:14px;word-break:break-word}
+
+/* ── Footer ── */
+.footer{border-top:1px solid var(--border);padding:34px 0;background:var(--bg)}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer .brand img{height:48px}
+
+/* ── Product page specifics (reused Uptime content) ── */
+.back-link{display:inline-flex;align-items:center;gap:6px;color:var(--text3);font-size:14px;margin-bottom:18px}
+.back-link:hover{color:var(--accent)}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.fcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:transform .15s,box-shadow .15s}
+.fcard:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--accent) 40%,var(--border))}
+.fcard .ico{font-size:26px;margin-bottom:12px}
+.fcard h3{font-size:17px;margin-bottom:6px}
+.fcard p{color:var(--text2);font-size:14.5px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+.step-num{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+  font-weight:800;color:#06211f;background:linear-gradient(135deg,var(--accent),#2b7de9);margin-bottom:14px}
+.step h3{font-size:16px;margin-bottom:6px}.step p{color:var(--text2);font-size:14px}
+.screenshot{margin:0 auto;max-width:960px;background:var(--surface);border:1px solid var(--border);
+  border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+.browser-bar{display:flex;gap:7px;padding:11px 14px;border-bottom:1px solid var(--border);background:var(--bg-alt)}
+.browser-bar span{width:11px;height:11px;border-radius:50%}
+.browser-bar span:first-child{background:#ff5f57}.browser-bar span:nth-child(2){background:#febc2e}.browser-bar span:nth-child(3){background:#28c840}
+.screenshot img{display:block;width:100%;height:auto}
+.download-box{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px 28px;box-shadow:var(--shadow);max-width:720px;margin:0 auto 32px}
+.download-left{display:flex;align-items:center;gap:18px}.download-left h3{font-size:20px}
+.ico-lg{font-size:40px}
+.ver{font-size:13px;color:var(--accent);font-weight:700;margin-left:6px}
+.tabs{max-width:760px;margin:0 auto}
+.tab-head{display:flex;gap:8px;justify-content:center;margin-bottom:18px}
+.tab-btn{background:var(--surface);border:1px solid var(--border);color:var(--text2);padding:9px 20px;border-radius:20px;font-weight:600;font-size:14px;cursor:pointer;transition:all .15s}
+.tab-btn:hover{border-color:var(--accent);color:var(--accent)}
+.tab-btn.active{background:var(--accent);border-color:var(--accent);color:#06211f}
+.tab-panel{display:none;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px 28px}
+.tab-panel.active{display:block}
+.install{list-style:none;counter-reset:step}
+.install li{counter-increment:step;position:relative;padding:0 0 16px 40px;color:var(--text2)}
+.install li::before{content:counter(step);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;
+  background:color-mix(in srgb,var(--accent) 18%,transparent);color:var(--accent);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.install li:last-child{padding-bottom:0}.install strong{color:var(--text)}
+.note{display:block;font-size:13px;color:var(--text3);margin-top:4px}
+
+/* ── Responsive ── */
+@media (max-width:900px){
+  .values,.feature-grid{grid-template-columns:repeat(2,1fr)}
+  .products{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr;gap:28px}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .contact-cards{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .nav-links{display:none}
+  .values,.feature-grid,.steps{grid-template-columns:1fr}
+  .hero{padding:56px 0}.section{padding:54px 0}
+  .download-box,.download-left{flex-direction:column;text-align:center}
+}

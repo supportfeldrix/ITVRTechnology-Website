@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Gateway (Coming soon) — ITVR Technology</title>
+<meta name="description" content="Gateway by ITVR Technology — a self-hosted API gateway application, in development. Route, secure and manage your APIs from one place."/>
+<link rel="icon" type="image/png" href="../assets/itvr-logo.png"/>
+<link rel="stylesheet" href="../styles.css"/>
+<script>(function(){try{if((localStorage.getItem('itvr-theme')||'light')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html" aria-label="ITVR Technology home">
+      <img src="../assets/itvr-logo.png" data-logo="1" alt="ITVR Technology" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"/>
+      <span class="brand-fallback" style="display:none">ITVR Technology</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#products">Products</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-btn" onclick="toggleTheme()" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
+      <a class="btn btn-primary btn-sm" href="../index.html#products">All products</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO / COMING SOON -->
+<section class="hero">
+  <div class="container">
+    <a class="back-link" href="../index.html#products" style="margin-bottom:22px">← All products</a>
+    <div class="eyebrow">Gateway · Coming soon</div>
+    <h1><span class="grad">Gateway</span></h1>
+    <p class="lead">
+      A self-hosted API gateway application — route, secure and manage your APIs from one place.
+      A practical alternative in the spirit of tools like APISIX, built the ITVR way: lightweight,
+      straightforward to run, and yours to own. It's in development now.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-primary btn-lg" href="#notify">Notify me at launch</a>
+      <a class="btn btn-ghost btn-lg" href="products/uptime.html" onclick="location.href='uptime.html';return false">See Uptime Monitoring</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT TO EXPECT -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">What to expect</h2>
+    <p class="section-sub">The capabilities we're building into Gateway.</p>
+    <div class="feature-grid">
+      <div class="fcard"><div class="ico">🧭</div><h3>Smart routing</h3><p>Route requests to the right upstream services with flexible, rule-based matching.</p></div>
+      <div class="fcard"><div class="ico">🔐</div><h3>Authentication</h3><p>Secure your APIs with token, key and identity-based access controls.</p></div>
+      <div class="fcard"><div class="ico">⚙️</div><h3>Plugins &amp; policies</h3><p>Rate limiting, transformations and traffic policies — composable per route.</p></div>
+      <div class="fcard"><div class="ico">📈</div><h3>Observability</h3><p>Built-in metrics and traffic insight so you can see what your APIs are doing.</p></div>
+      <div class="fcard"><div class="ico">🪶</div><h3>Lightweight &amp; self-hosted</h3><p>Run it on your own infrastructure without a heavy platform behind it.</p></div>
+      <div class="fcard"><div class="ico">🎨</div><h3>Made your own</h3><p>Configurable and brandable to fit your business, like everything we build.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTIFY -->
+<section id="notify" class="section section-alt">
+  <div class="container center">
+    <h2 class="section-title">Be the first to know</h2>
+    <p class="section-sub">Want an early look or a heads-up when Gateway launches? Drop us a line.</p>
+    <a class="btn btn-primary btn-lg" href="mailto:info@itvrtechnology.co.za?subject=Gateway%20launch%20notification">Email info@itvrtechnology.co.za</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <a class="brand" href="../index.html">
+      <img src="../assets/itvr-logo.png" data-logo="1" alt="ITVR Technology" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"/>
+      <span class="brand-fallback" style="display:none">ITVR Technology</span>
+    </a>
+    <p class="muted">© <span data-year></span> ITVR Technology · itvrtechnology.co.za</p>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
