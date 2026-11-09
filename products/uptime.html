@@ -22,6 +22,7 @@
       <a href="../index.html#products">Products</a>
       <a href="#features">Features</a>
       <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
       <a href="#download">Download</a>
     </nav>
     <div class="nav-actions">
@@ -90,8 +91,51 @@
   </div>
 </section>
 
+<!-- PRICING -->
+<section id="pricing" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Simple pricing</h2>
+    <p class="section-sub">Start free. Upgrade to PRO when you outgrow 4 monitors.</p>
+    <div class="pricing">
+      <!-- Free -->
+      <div class="plan">
+        <div class="plan-name">Free</div>
+        <div class="plan-price"><span class="amount">R0</span></div>
+        <div class="plan-tagline">Everything you need to get started</div>
+        <ul class="plan-features">
+          <li>✓ Up to <strong>4 monitors</strong></li>
+          <li>✓ HTTP / HTTPS / TCP / keyword checks</li>
+          <li>✓ Database &amp; server monitoring</li>
+          <li>✓ Status pages &amp; email alerts</li>
+          <li>✓ SSL tracking, dark mode, your branding</li>
+          <li>✓ Windows &amp; Linux</li>
+        </ul>
+        <a class="btn btn-ghost btn-lg" href="#download">Download free</a>
+      </div>
+      <!-- PRO -->
+      <div class="plan plan-featured">
+        <div class="plan-badge-top">Most popular</div>
+        <div class="plan-name">PRO</div>
+        <div class="plan-price"><span class="amount">R500</span><span class="per">/ year</span></div>
+        <div class="plan-tagline">For teams monitoring more than a handful of services</div>
+        <ul class="plan-features">
+          <li>✓ <strong>Unlimited monitors</strong></li>
+          <li>✓ Everything in Free</li>
+          <li>✓ Priority email support</li>
+          <li>✓ 1-year licence key</li>
+        </ul>
+        <a class="btn btn-primary btn-lg" href="mailto:info@itvrtechnology.co.za?subject=Uptime%20Monitoring%20PRO%20licence&amp;body=Hi%20ITVR%20Technology%2C%0A%0AI'd%20like%20to%20buy%20a%20PRO%20licence%20(R500%2Fyear)%20for%20Uptime%20Monitoring.%0A%0ACompany%2Fname%3A%20%0A">Get PRO</a>
+        <div class="note" style="margin-top:10px">Pay once a year · cancel anytime · licence key emailed to you</div>
+      </div>
+    </div>
+    <p class="muted center" style="margin-top:20px;font-size:13px">
+      Already have a key? Enter it in the app under <strong>Settings → About → Licence &amp; Plan</strong>.
+    </p>
+  </div>
+</section>
+
 <!-- DOWNLOAD -->
-<section id="download" class="section section-alt">
+<section id="download" class="section">
   <div class="container">
     <h2 class="section-title">Get Uptime Monitoring</h2>
     <p class="section-sub">Free to download and run on your own infrastructure.</p>
@@ -100,17 +144,17 @@
       <div class="download-left">
         <div class="ico-lg">📦</div>
         <div>
-          <h3>Uptime Monitoring <span class="ver">v1.0 · Windows</span></h3>
-          <p class="muted">Windows 10/11 · no install needed · runs in the system tray · ~24 MB</p>
+          <h3>Uptime Monitoring <span class="ver" id="dl-ver">v1.0 · Windows</span></h3>
+          <p class="muted" id="dl-sub">Windows 10/11 · no install needed · runs in the system tray · ~24 MB</p>
         </div>
       </div>
-      <a class="btn btn-primary btn-lg" href="#" onclick="return startDownload()">Download</a>
+      <a class="btn btn-primary btn-lg" id="dl-btn" href="#" onclick="return downloadForPlatform()">Download for Windows</a>
     </div>
 
     <div class="tabs">
       <div class="tab-head" role="tablist">
         <button class="tab-btn active" data-tab="win" onclick="showTab('win')" role="tab">🪟 Windows</button>
-        <button class="tab-btn" data-tab="linux" onclick="showTab('linux')" role="tab">🐧 Linux · soon</button>
+        <button class="tab-btn" data-tab="linux" onclick="showTab('linux')" role="tab">🐧 Linux</button>
       </div>
 
       <div class="tab-panel active" data-tab="win">
@@ -124,15 +168,29 @@
       </div>
 
       <div class="tab-panel" data-tab="linux">
-        <div style="text-align:center;padding:24px 10px">
-          <div style="font-size:40px;margin-bottom:12px">🐧</div>
-          <h3 style="font-size:20px;margin-bottom:8px">Linux — Coming soon</h3>
-          <p style="color:var(--text2);max-width:460px;margin:0 auto 18px">
-            A native Linux package (RPM/DEB) is on the way for easy install on your servers.
-            Want to be notified when it's ready?
-          </p>
-          <a class="btn btn-ghost" href="mailto:info@itvrtechnology.co.za?subject=Uptime%20Monitoring%20for%20Linux">Notify me</a>
+        <div style="text-align:center;margin-bottom:20px">
+          <a class="btn btn-primary btn-lg" href="../assets/uptime-monitor-1.0.0-1.fc45.x86_64.rpm" download>⬇ Download RPM (RHEL / Rocky / Alma / Fedora)</a>
+          <div class="note" style="margin-top:8px">For RPM-based Linux · installs as a systemd service · ~ small download (sets up dependencies on install)</div>
         </div>
+        <ol class="install">
+          <li>Install it (sets up a service account, Python environment and a systemd service automatically):
+            <pre><code>sudo dnf install ./uptime-monitor-1.0.0-1.fc45.x86_64.rpm</code></pre>
+            <span class="note">Needs internet to fetch Python dependencies on install. Air-gapped? See offline notes below.</span>
+          </li>
+          <li>It starts automatically. Open the dashboard in a browser:
+            <pre><code>http://&lt;your-server&gt;:5000/</code></pre>
+          </li>
+          <li>On first run, <strong>create your admin account</strong> right in the browser — then set your branding and add monitors.</li>
+          <li>Manage the service any time:
+            <pre><code>systemctl status uptime-monitor
+journalctl -u uptime-monitor -f</code></pre>
+          </li>
+        </ol>
+        <span class="note">
+          HTTPS / auto-start on boot are built in (systemd). For HTTPS put nginx in front using the included
+          <code>LINUX_SETUP/nginx-uptime-monitor.conf</code>. Offline servers: see the OFFLINE section in the package README.
+          Debian/Ubuntu (.deb) is coming soon — <a href="mailto:info@itvrtechnology.co.za?subject=Uptime%20Monitoring%20DEB%20package" style="color:var(--accent)">let us know</a> if you need it.
+        </span>
       </div>
     </div>
     <p class="muted center" style="margin-top:18px">
@@ -153,5 +211,51 @@
 </footer>
 
 <script src="../script.js"></script>
+<script>
+/* Make the top download box follow the selected OS tab. */
+const PLATFORMS = {
+  win: {
+    ver: "v1.0 · Windows",
+    sub: "Windows 10/11 · no install needed · runs in the system tray · ~24 MB",
+    btn: "Download for Windows",
+    file: "../assets/UptimeMonitor-Windows-v1.0.zip"
+  },
+  linux: {
+    ver: "v1.0 · Linux (RPM)",
+    sub: "RHEL / Rocky / Alma / Fedora · installs as a systemd service",
+    btn: "Download RPM",
+    file: "../assets/uptime-monitor-1.0.0-1.fc45.x86_64.rpm"
+  }
+};
+let _platform = "win";
+
+// Wrap the shared showTab so switching tabs also updates the download box.
+const _origShowTab = window.showTab;
+window.showTab = function(tab) {
+  if (typeof _origShowTab === "function") _origShowTab(tab);
+  if (PLATFORMS[tab]) {
+    _platform = tab;
+    const p = PLATFORMS[tab];
+    const ver = document.getElementById("dl-ver");
+    const sub = document.getElementById("dl-sub");
+    const btn = document.getElementById("dl-btn");
+    if (ver) ver.textContent = p.ver;
+    if (sub) sub.textContent = p.sub;
+    if (btn) btn.textContent = p.btn;
+  }
+};
+
+// Download the file for the currently selected platform.
+function downloadForPlatform() {
+  const p = PLATFORMS[_platform] || PLATFORMS.win;
+  const a = document.createElement("a");
+  a.href = p.file;
+  a.download = p.file.split("/").pop();
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  return false;
+}
+</script>
 </body>
 </html>

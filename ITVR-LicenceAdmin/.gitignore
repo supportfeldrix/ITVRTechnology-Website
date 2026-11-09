@@ -1,0 +1,7 @@
+# NEVER commit or share these — they are the crown jewels / private data
+license_private.pem
+licences.db
+.env
+venv/
+__pycache__/
+*.pyc

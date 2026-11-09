@@ -183,6 +183,24 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;height:3px;
 .install li:last-child{padding-bottom:0}.install strong{color:var(--text)}
 .note{display:block;font-size:13px;color:var(--text3);margin-top:4px}
 
+/* ── Pricing ── */
+.pricing{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:760px;margin:0 auto;align-items:stretch}
+.plan{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:30px 26px;box-shadow:var(--shadow)}
+.plan-featured{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 35%,transparent),var(--shadow)}
+.plan-badge-top{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#06211f;
+  font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:4px 12px;border-radius:20px;white-space:nowrap}
+.plan-name{font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--text3)}
+.plan-price{margin:10px 0 4px}
+.plan-price .amount{font-size:40px;font-weight:800;letter-spacing:-.02em}
+.plan-price .per{font-size:15px;color:var(--text3);margin-left:4px}
+.plan-tagline{color:var(--text2);font-size:14px;margin-bottom:18px;min-height:40px}
+.plan-features{list-style:none;margin:0 0 22px;padding:0;flex:1}
+.plan-features li{font-size:14.5px;color:var(--text2);padding:6px 0;border-bottom:1px solid var(--border2, var(--border))}
+.plan-features li:last-child{border-bottom:none}
+.plan .btn{width:100%}
+@media (max-width:680px){ .pricing{grid-template-columns:1fr} }
+
 /* ── Responsive ── */
 @media (max-width:900px){
   .values,.feature-grid{grid-template-columns:repeat(2,1fr)}
