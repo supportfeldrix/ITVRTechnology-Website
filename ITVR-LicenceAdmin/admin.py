@@ -351,8 +351,9 @@ async function gen(){{
   if(!r.ok){{alert(d.error||'Error');return;}}
   const box=document.getElementById('keybox');
   box.style.display='block';
-  box.innerHTML='<b>'+d.client+'</b> — expires: '+d.expires+'<br><br>'+d.key+
-    '<br><br><span class="copy" onclick="navigator.clipboard.writeText(this.dataset.k);this.textContent=\\'✓ copied\\'" data-k="'+d.key+'">📋 Copy key</span>';
+  box.innerHTML='<b>'+esc(d.client)+'</b> — expires: '+d.expires+'<br><br>'+esc(d.key)+
+    '<br><br><span class="copy" data-k="'+esc(d.key)+'">📋 Copy key</span>';
+  wireCopies();
   document.getElementById('client').value='';document.getElementById('notes').value='';
   loadList();
 }}
@@ -368,11 +369,18 @@ async function loadList(){{
     else if(r.days_left!=null && r.days_left<=30)badge='<span class="badge soon">'+r.days_left+'d left</span>';
     h+='<tr><td><b>'+esc(r.client)+'</b>'+(r.notes?'<br><span class="muted">'+esc(r.notes)+'</span>':'')+'</td>'+
        '<td>'+r.issued+'</td><td>'+(r.expires||'never')+'</td><td>'+badge+'</td>'+
-       '<td class="keycell"><span class="copy" onclick="navigator.clipboard.writeText(this.dataset.k);this.textContent=\\'✓\\'" data-k="'+r.key+'">'+r.key.slice(0,22)+'… 📋</span></td>'+
-       '<td><button class="btn btn-sm btn-ghost" onclick="del('+r.id+')">Delete</button></td></tr>';
+       '<td class="keycell"><span class="copy" data-k="'+esc(r.key)+'">'+esc(r.key.slice(0,22))+'… 📋</span></td>'+
+       '<td><button class="btn btn-sm btn-ghost" data-del="'+r.id+'">Delete</button></td></tr>';
   }}
   h+='</tbody></table>';
   document.getElementById('list').innerHTML=h;
+  wireCopies();
+  document.querySelectorAll('[data-del]').forEach(b=>b.addEventListener('click',()=>del(b.dataset.del)));
+}}
+function wireCopies(){{
+  document.querySelectorAll('.copy').forEach(el=>{{
+    el.onclick=()=>{{ navigator.clipboard.writeText(el.dataset.k); const t=el.textContent; el.textContent='✓ copied'; setTimeout(()=>{{el.textContent=t;}},1500); }};
+  }});
 }}
 function esc(s){{return (s||'').replace(/[&<>]/g,c=>({{'&':'&amp;','<':'&lt;','>':'&gt;'}}[c]));}}
 async function del(id){{if(!confirm('Delete this licence record? (The key stays valid until it expires.)'))return;await fetch('/api/licences/'+id,{{method:'DELETE'}});loadList();}}
