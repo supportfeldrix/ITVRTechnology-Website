@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Gateway (Coming soon) — ITVR Technology</title>
-<meta name="description" content="Gateway by ITVR Technology — a self-hosted API gateway application, in development. Route, secure and manage your APIs from one place."/>
+<title>Gateway — ITVR Technology</title>
+<meta name="description" content="Gateway by ITVR Technology: a self-hosted API gateway with a management dashboard. Dynamic routing, load balancing, JWT auth, rate limiting, live traffic monitoring and container health — installed with one command using Podman."/>
 <link rel="icon" type="image/png" href="../assets/itvr-logo.png"/>
 <link rel="stylesheet" href="../styles.css"/>
 <script>(function(){try{if((localStorage.getItem('itvr-theme')||'light')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
@@ -20,56 +20,125 @@
     </a>
     <nav class="nav-links">
       <a href="../index.html#products">Products</a>
-      <a href="../index.html#about">About</a>
-      <a href="../index.html#contact">Contact</a>
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#download">Download</a>
     </nav>
     <div class="nav-actions">
       <button class="theme-btn" onclick="toggleTheme()" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
-      <a class="btn btn-primary btn-sm" href="../index.html#products">All products</a>
+      <a class="btn btn-primary btn-sm" href="#download">Get it</a>
     </div>
   </div>
 </header>
 
-<!-- HERO / COMING SOON -->
+<a id="top"></a>
+
+<!-- HERO -->
 <section class="hero">
   <div class="container">
     <a class="back-link" href="../index.html#products" style="margin-bottom:22px">← All products</a>
-    <div class="eyebrow">Gateway · Coming soon</div>
-    <h1><span class="grad">Gateway</span></h1>
+    <div class="eyebrow">Gateway · Available now</div>
+    <h1>Route, secure and watch your APIs <span class="grad">from one place.</span></h1>
     <p class="lead">
-      A self-hosted API gateway application — route, secure and manage your APIs from one place.
-      A practical alternative in the spirit of tools like APISIX, built the ITVR way: lightweight,
-      straightforward to run, and yours to own. It's in development now.
+      A lightweight, self-hosted API gateway with a built-in management dashboard.
+      Define routes and upstreams, add authentication and rate limiting, and see live traffic,
+      latency and container health — all running on your own Linux server with a single command.
     </p>
     <div class="hero-cta">
-      <a class="btn btn-primary btn-lg" href="#notify">Notify me at launch</a>
-      <a class="btn btn-ghost btn-lg" href="products/uptime.html" onclick="location.href='uptime.html';return false">See Uptime Monitoring</a>
+      <a class="btn btn-primary btn-lg" href="#download">Download</a>
+      <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
     </div>
   </div>
 </section>
 
-<!-- WHAT TO EXPECT -->
-<section class="section">
+<!-- FEATURES -->
+<section id="features" class="section section-alt">
   <div class="container">
-    <h2 class="section-title">What to expect</h2>
-    <p class="section-sub">The capabilities we're building into Gateway.</p>
+    <h2 class="section-title">What's in the box</h2>
+    <p class="section-sub">A gateway and the dashboard to run it — nothing else to assemble.</p>
     <div class="feature-grid">
-      <div class="fcard"><div class="ico">🧭</div><h3>Smart routing</h3><p>Route requests to the right upstream services with flexible, rule-based matching.</p></div>
-      <div class="fcard"><div class="ico">🔐</div><h3>Authentication</h3><p>Secure your APIs with token, key and identity-based access controls.</p></div>
-      <div class="fcard"><div class="ico">⚙️</div><h3>Plugins &amp; policies</h3><p>Rate limiting, transformations and traffic policies — composable per route.</p></div>
-      <div class="fcard"><div class="ico">📈</div><h3>Observability</h3><p>Built-in metrics and traffic insight so you can see what your APIs are doing.</p></div>
-      <div class="fcard"><div class="ico">🪶</div><h3>Lightweight &amp; self-hosted</h3><p>Run it on your own infrastructure without a heavy platform behind it.</p></div>
-      <div class="fcard"><div class="ico">🎨</div><h3>Made your own</h3><p>Configurable and brandable to fit your business, like everything we build.</p></div>
+      <div class="fcard"><div class="ico">🧭</div><h3>Dynamic routing</h3><p>Match requests by host, path and method. Add or change routes from the dashboard and they take effect immediately — no restart.</p></div>
+      <div class="fcard"><div class="ico">⚖️</div><h3>Upstreams &amp; load balancing</h3><p>Send traffic to one or many backend nodes with round-robin or weighted balancing.</p></div>
+      <div class="fcard"><div class="ico">🔐</div><h3>JWT authentication</h3><p>Protect any route by requiring a valid bearer token. Invalid or missing tokens are rejected before they reach your service.</p></div>
+      <div class="fcard"><div class="ico">⏱️</div><h3>Rate limiting &amp; CORS</h3><p>Cap requests per client with a configurable window, and handle cross-origin requests per route.</p></div>
+      <div class="fcard"><div class="ico">📈</div><h3>Live monitoring</h3><p>Traffic trend, status-code breakdown, per-route totals and latency over time, with a per-minute traffic report.</p></div>
+      <div class="fcard"><div class="ico">📜</div><h3>Log viewer</h3><p>Browse recent requests with route, status and path filters. History is kept on disk and survives restarts (7 days by default).</p></div>
+      <div class="fcard"><div class="ico">🐧</div><h3>Container health</h3><p>See your gateway's containers — state, CPU and memory — right in the dashboard, without logging in to the server.</p></div>
+      <div class="fcard"><div class="ico">💾</div><h3>Backup &amp; restore</h3><p>Export all routes, upstreams and consumers to a file and import them again — merge or full replace.</p></div>
+      <div class="fcard"><div class="ico">👥</div><h3>Roles &amp; dark mode</h3><p>Admin and viewer roles keep changes in the right hands, in a clean light or dark interface.</p></div>
     </div>
   </div>
 </section>
 
-<!-- NOTIFY -->
-<section id="notify" class="section section-alt">
-  <div class="container center">
-    <h2 class="section-title">Be the first to know</h2>
-    <p class="section-sub">Want an early look or a heads-up when Gateway launches? Drop us a line.</p>
-    <a class="btn btn-primary btn-lg" href="mailto:info@itvrtechnology.co.za?subject=Gateway%20launch%20notification">Email info@itvrtechnology.co.za</a>
+<!-- HOW IT WORKS -->
+<section id="how" class="section">
+  <div class="container">
+    <h2 class="section-title">Up and running in four steps</h2>
+    <p class="section-sub">Pre-built containers — nothing to compile, no internet needed after the download.</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h3>Download &amp; extract</h3><p>Grab the package and unpack it with <code>tar xzf</code> on your Linux server.</p></div>
+      <div class="step"><div class="step-num">2</div><h3>Run the installer</h3><p>Run <code>./install.sh</code>. It loads the images and starts the gateway and dashboard.</p></div>
+      <div class="step"><div class="step-num">3</div><h3>Sign in</h3><p>Open the dashboard on port 8081, sign in as <code>admin</code> and change the password straight away.</p></div>
+      <div class="step"><div class="step-num">4</div><h3>Add your first route</h3><p>Create an upstream, point a route at it, and send traffic through the gateway on port 8080.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section id="download" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Get Gateway</h2>
+    <p class="section-sub">Download and run it on your own infrastructure.</p>
+
+    <div class="download-box">
+      <div class="download-left">
+        <div class="ico-lg">📦</div>
+        <div>
+          <h3>Gateway <span class="ver">v1.0.0 · Linux (Podman)</span></h3>
+          <p class="muted">Fedora / RHEL / Rocky / Alma · pre-built containers · works offline · ~76 MB</p>
+        </div>
+      </div>
+      <a class="btn btn-primary btn-lg" href="../assets/itvr-gateway-1.0.0.tar.gz" download>⬇ Download for Linux</a>
+    </div>
+
+    <div class="tabs">
+      <div class="tab-panel active">
+        <h3 style="margin-bottom:12px">Requirements</h3>
+        <ol class="install" style="margin-bottom:22px">
+          <li>A Linux server or workstation with <strong>Podman</strong> (installed by default on Fedora; otherwise <code>sudo dnf install -y podman</code>).</li>
+          <li>Ports <strong>8080</strong> (gateway), <strong>8081</strong> (dashboard) and <strong>9180</strong> (admin API) free. All three can be changed in the config file.</li>
+        </ol>
+
+        <h3 style="margin-bottom:12px">Install</h3>
+        <ol class="install">
+          <li>Extract the package:
+            <pre><code>tar xzf itvr-gateway-1.0.0.tar.gz
+cd itvr-gateway-1.0.0</code></pre>
+          </li>
+          <li>(Recommended) Set your own admin password and secret before the first start:
+            <pre><code>cp .env.example .env
+nano .env</code></pre>
+          </li>
+          <li>Install and start:
+            <pre><code>./install.sh</code></pre>
+          </li>
+          <li>Open the dashboard and sign in:
+            <pre><code>http://&lt;your-server&gt;:8081</code></pre>
+            <span class="note">Default login is <code>admin</code> / <code>admin123</code> unless you changed it in <code>.env</code>. Change it on first sign-in.</span>
+          </li>
+        </ol>
+        <span class="note">
+          Your routes, upstreams, users and request logs are stored in a Podman volume, so they survive restarts and upgrades.
+          To stop it: <code>./uninstall.sh</code> (keeps your data) or <code>./uninstall.sh --purge</code> (removes everything).
+          The full guide is included in the package as <code>INSTALL.md</code>.
+        </span>
+      </div>
+    </div>
+
+    <p class="muted center" style="margin-top:18px">
+      This release is for Linux with Podman. Windows and macOS are not supported yet.
+      Need help or another platform? <a href="mailto:info@itvrtechnology.co.za?subject=Gateway%20support" style="color:var(--accent)">Get in touch</a>.
+    </p>
   </div>
 </section>
 
