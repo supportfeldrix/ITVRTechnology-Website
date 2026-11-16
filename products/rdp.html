@@ -195,12 +195,16 @@ function urlFor(name) { return (missingOnServer[name] ? GITHUB_RELEASE : "../ass
 function refreshLinks() {
   document.querySelectorAll("a[data-dl]").forEach(function (a) { a.href = urlFor(a.dataset.dl); });
 }
-FILES.forEach(function (name) {
-  fetch("../assets/" + name, { method: "HEAD", cache: "no-store" })
-    .then(function (r) { if (!r.ok) missingOnServer[name] = true; })
-    .catch(function () { missingOnServer[name] = true; })
-    .then(refreshLinks);
-});
+/* Opened straight from a folder (file://) the browser cannot probe the server, and the files sit
+   right next to the page, so keep the local links. The probe only runs on a real web server. */
+if (location.protocol !== "file:") {
+  FILES.forEach(function (name) {
+    fetch("../assets/" + name, { method: "HEAD", cache: "no-store" })
+      .then(function (r) { if (!r.ok) missingOnServer[name] = true; })
+      .catch(function () { missingOnServer[name] = true; })
+      .then(refreshLinks);
+  });
+}
 
 /* Keep the top download box in step with the selected OS tab. */
 const PLATFORMS = {
