@@ -2,3 +2,10 @@
 # so they live in assets/ on the web server only and are never committed.
 assets/ITVR-RDP-*.exe
 assets/ITVR-RDP-*.zip
+
+# Raw electron-builder output must never be committed (win-unpacked contains a 239 MB exe).
+assets/win-unpacked/
+assets/.icon-ico/
+assets/builder-debug.yml
+assets/latest.yml
+assets/*.blockmap
