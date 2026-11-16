@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ITVR RDP — ITVR Technology</title>
+<meta name="description" content="ITVR RDP by ITVR Technology: a remote connection manager for Windows and macOS. Open RDP and SSH sessions as tabs in one window, in single, 2-pane or 4-pane split view, with SFTP file transfer, shared credentials, RD Gateway support and import from Remote Desktop Manager."/>
+<link rel="icon" type="image/png" href="../assets/itvr-logo.png"/>
+<link rel="stylesheet" href="../styles.css"/>
+<script>(function(){try{if((localStorage.getItem('itvr-theme')||'light')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html" aria-label="ITVR Technology home">
+      <img src="../assets/itvr-logo.png" data-logo="1" alt="ITVR Technology" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"/>
+      <span class="brand-fallback" style="display:none">ITVR Technology</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#products">Products</a>
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#download">Download</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-btn" onclick="toggleTheme()" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
+      <a class="btn btn-primary btn-sm" href="#download">Get it</a>
+    </div>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <a class="back-link" href="../index.html#products">← All products</a>
+    <div style="text-align:center">
+      <img src="../assets/itvr-rdp-logo.png" alt="ITVR RDP logo" width="96" height="96" style="margin-bottom:10px"/>
+      <div class="eyebrow" style="display:inline-block;font-size:13px;font-weight:700;color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent);padding:6px 14px;border-radius:20px;margin-bottom:18px">ITVR RDP · Available now</div>
+      <h1 style="font-size:clamp(30px,4.5vw,48px);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin-bottom:16px">All your remote servers, <span class="grad">in one window.</span></h1>
+      <p class="lead" style="max-width:700px;margin:0 auto 28px;color:var(--text2);font-size:18px">
+        A connection manager for Windows and macOS. Open your RDP and SSH sessions as tabs,
+        view up to four at once, move files with built-in SFTP, and keep every login in one
+        place — without juggling a separate window for every server.
+      </p>
+      <div class="hero-cta" style="margin-bottom:40px">
+        <a class="btn btn-primary btn-lg" href="#download">Download</a>
+        <a class="btn btn-ghost btn-lg" href="#features">See what it does</a>
+      </div>
+    </div>
+    <figure class="screenshot">
+      <img src="../assets/itvr-rdp-app.png" alt="ITVR RDP showing a folder tree of RDP and SSH connections with the details of the selected server: host, shared credential, gateway and display settings" loading="lazy"/>
+    </figure>
+    <p class="muted center" style="margin-top:12px;font-size:13px">Screenshot uses example servers.</p>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Everything you need to reach your servers</h2>
+    <p class="section-sub">RDP and SSH, organised in a tree, opened in tabs, secured by default.</p>
+    <div class="feature-grid">
+      <div class="fcard"><div class="ico">🖥️</div><h3>RDP in tabs</h3><p>Remote desktops open inside the app, not in separate windows. Network Level Authentication, clipboard, Ctrl+Alt+Del, and a desktop that resizes to fit its tab.</p></div>
+      <div class="fcard"><div class="ico">⌨️</div><h3>SSH terminals</h3><p>Full terminal tabs with password or private-key sign-in, resizing and scrollback — alongside your RDP sessions.</p></div>
+      <div class="fcard"><div class="ico">🪟</div><h3>Split view: 1, 2 or 4</h3><p>Watch several servers at once. Drag tabs onto panes, click to focus. Sessions stay connected as you change the layout.</p></div>
+      <div class="fcard"><div class="ico">📁</div><h3>SFTP file browser</h3><p>Open a file panel beside any SSH session. Upload and download files and whole folders, rename, delete — or just drag and drop.</p></div>
+      <div class="fcard"><div class="ico">🔑</div><h3>Shared credentials</h3><p>Save a login once and link it to as many servers as you like. Change the password in one place and every entry follows.</p></div>
+      <div class="fcard"><div class="ico">🚪</div><h3>RD Gateway</h3><p>Reach servers behind a Remote Desktop Gateway over HTTPS with NTLM sign-in (Windows Server 2016 or later), with the same or a separate login.</p></div>
+      <div class="fcard"><div class="ico">📥</div><h3>Import from Remote Desktop Manager</h3><p>Bring in your RDM folders and entries from an XML, JSON or CSV export. Preview first; nothing changes until you confirm.</p></div>
+      <div class="fcard"><div class="ico">🔒</div><h3>Secure by default</h3><p>Saved passwords are encrypted with Windows or macOS secure storage. Server certificates and SSH host keys are pinned, and exports never contain passwords.</p></div>
+      <div class="fcard"><div class="ico">🗂️</div><h3>Organise &amp; find fast</h3><p>Folders, tags, favourites, search and a quick-connect bar. Dark interface, light on resources, no account needed.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="section">
+  <div class="container">
+    <h2 class="section-title">Up and running in four steps</h2>
+    <p class="section-sub">An installer or a portable copy — your choice.</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h3>Download</h3><p>Pick the Windows installer, a portable ZIP, or the macOS build for your Mac.</p></div>
+      <div class="step"><div class="step-num">2</div><h3>Install or unzip</h3><p>Run the installer, or unzip the portable version anywhere — a folder or a USB stick.</p></div>
+      <div class="step"><div class="step-num">3</div><h3>Add your servers</h3><p>Create RDP and SSH entries, link a shared credential, or import your Remote Desktop Manager export.</p></div>
+      <div class="step"><div class="step-num">4</div><h3>Connect</h3><p>Double-click a server to open it in a tab. Switch to split view to see several at once.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section id="download" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Get ITVR RDP</h2>
+    <p class="section-sub">Download and run it on your own computer. Version 1.0.0.</p>
+
+    <div class="download-box" style="max-width:860px">
+      <div class="download-left">
+        <img src="../assets/itvr-rdp-logo.png" alt="" width="56" height="56"/>
+        <div>
+          <h3>ITVR RDP <span class="ver" id="dl-ver">v1.0.0 · Windows</span></h3>
+          <p class="muted" id="dl-sub">Windows 10/11 · no admin rights needed · ~120 MB</p>
+        </div>
+      </div>
+      <a class="btn btn-primary btn-lg" id="dl-btn" href="https://github.com/supportfeldrix/ITVR-RDP/releases/download/v1.0.0/ITVR-RDP-Setup-1.0.0-win-x64.exe">⬇ Download installer</a>
+    </div>
+
+    <div class="tabs">
+      <div class="tab-head" role="tablist">
+        <button class="tab-btn active" data-tab="win" onclick="showTab('win')" role="tab">🪟 Windows</button>
+        <button class="tab-btn" data-tab="mac" onclick="showTab('mac')" role="tab">🍎 macOS</button>
+      </div>
+
+      <div class="tab-panel active" data-tab="win">
+        <h3 style="margin-bottom:12px">Choose a version</h3>
+        <ol class="install" style="margin-bottom:22px">
+          <li><strong>Installer (recommended)</strong> — installs for your user and adds a Start menu shortcut.
+            <div style="margin-top:8px"><a class="btn btn-primary" href="https://github.com/supportfeldrix/ITVR-RDP/releases/download/v1.0.0/ITVR-RDP-Setup-1.0.0-win-x64.exe">⬇ ITVR-RDP-Setup-1.0.0-win-x64.exe</a> <span class="note" style="display:inline;margin-left:8px">~120 MB</span></div>
+          </li>
+          <li><strong>Portable ZIP</strong> — nothing to install. Unzip anywhere, even a USB stick, and run <code>ITVR RDP.exe</code>. Starts in about a second after the first run.
+            <div style="margin-top:8px"><a class="btn btn-ghost" href="https://github.com/supportfeldrix/ITVR-RDP/releases/download/v1.0.0/ITVR-RDP-Portable-1.0.0-win-x64.zip">⬇ ITVR-RDP-Portable-1.0.0-win-x64.zip</a> <span class="note" style="display:inline;margin-left:8px">~152 MB</span></div>
+          </li>
+          <li><strong>Single-file portable</strong> — one <code>.exe</code> that unpacks itself on every launch, so it takes 20–30 seconds to start. Use the ZIP if you can.
+            <div style="margin-top:8px"><a class="btn btn-ghost" href="https://github.com/supportfeldrix/ITVR-RDP/releases/download/v1.0.0/ITVR-RDP-Portable-1.0.0-win-x64.exe">⬇ ITVR-RDP-Portable-1.0.0-win-x64.exe</a> <span class="note" style="display:inline;margin-left:8px">~109 MB</span></div>
+          </li>
+        </ol>
+        <span class="note">
+          <strong>Windows may show a SmartScreen warning</strong> the first time, because the app is not yet code-signed.
+          Choose <em>More info</em>, then <em>Run anyway</em>. Your connections and saved passwords stay on your PC, in your user profile.
+        </span>
+      </div>
+
+      <div class="tab-panel" data-tab="mac">
+        <h3 style="margin-bottom:12px">Choose your Mac</h3>
+        <ol class="install" style="margin-bottom:22px">
+          <li><strong>Apple Silicon</strong> (M1, M2, M3 and newer)
+            <div style="margin-top:8px"><a class="btn btn-primary" href="https://github.com/supportfeldrix/ITVR-RDP/releases/download/v1.0.0/ITVR-RDP-1.0.0-mac-arm64.zip">⬇ ITVR-RDP-1.0.0-mac-arm64.zip</a> <span class="note" style="display:inline;margin-left:8px">~126 MB</span></div>
+          </li>
+          <li><strong>Intel Mac</strong>
+            <div style="margin-top:8px"><a class="btn btn-ghost" href="https://github.com/supportfeldrix/ITVR-RDP/releases/download/v1.0.0/ITVR-RDP-1.0.0-mac-x64.zip">⬇ ITVR-RDP-1.0.0-mac-x64.zip</a> <span class="note" style="display:inline;margin-left:8px">~129 MB</span></div>
+          </li>
+        </ol>
+        <span class="note" style="margin-bottom:6px">Not sure which Mac you have? Apple menu → About This Mac. It says <em>Chip</em> for Apple Silicon, or <em>Processor</em> for Intel.</span>
+
+        <h3 style="margin:18px 0 12px">Install</h3>
+        <ol class="install">
+          <li>Unzip the download.</li>
+          <li>Double-click <code>Install ITVR RDP.command</code>. If macOS blocks it, right-click it, choose <strong>Open</strong>, then <strong>Open</strong> again. It copies the app to Applications and starts it.</li>
+        </ol>
+        <span class="note">
+          <strong>The Mac build is not yet signed with an Apple Developer certificate</strong>, which is why the extra step is needed.
+          To install by hand instead: drag the app to Applications, then run
+          <code>xattr -cr "/Applications/ITVR RDP.app"</code> and
+          <code>codesign --force --deep --sign - "/Applications/ITVR RDP.app"</code> in Terminal (the second command comes with Apple's free Command Line Tools).
+          Remote desktops open inside the app, so nothing else is required.
+        </span>
+      </div>
+    </div>
+
+    <p class="muted center" style="margin-top:18px">
+      Questions, feedback, or something not working? <a href="mailto:info@itvrtechnology.co.za?subject=ITVR%20RDP" style="color:var(--accent)">Get in touch</a>
+      · <a href="https://github.com/supportfeldrix/ITVR-RDP/releases" style="color:var(--accent)">All releases</a>.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <a class="brand" href="../index.html">
+      <img src="../assets/itvr-logo.png" data-logo="1" alt="ITVR Technology" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"/>
+      <span class="brand-fallback" style="display:none">ITVR Technology</span>
+    </a>
+    <p class="muted">© <span data-year></span> ITVR Technology · itvrtechnology.co.za</p>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+<script>
+/* Keep the top download box in step with the selected OS tab. */
+const PLATFORMS = {
+  win: {
+    ver: "v1.0.0 · Windows",
+    sub: "Windows 10/11 · no admin rights needed · ~120 MB",
+    btn: "⬇ Download installer",
+    file: "https://github.com/supportfeldrix/ITVR-RDP/releases/download/v1.0.0/ITVR-RDP-Setup-1.0.0-win-x64.exe"
+  },
+  mac: {
+    ver: "v1.0.0 · macOS",
+    sub: "Apple Silicon · unsigned build, steps below · ~126 MB",
+    btn: "⬇ Download for Apple Silicon",
+    file: "https://github.com/supportfeldrix/ITVR-RDP/releases/download/v1.0.0/ITVR-RDP-1.0.0-mac-arm64.zip"
+  }
+};
+const _origShowTab = window.showTab;
+window.showTab = function (tab) {
+  if (typeof _origShowTab === "function") _origShowTab(tab);
+  const p = PLATFORMS[tab];
+  if (!p) return;
+  document.getElementById("dl-ver").textContent = p.ver;
+  document.getElementById("dl-sub").textContent = p.sub;
+  const btn = document.getElementById("dl-btn");
+  btn.textContent = p.btn;
+  btn.href = p.file;
+};
+</script>
+</body>
+</html>

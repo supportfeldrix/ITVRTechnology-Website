@@ -104,7 +104,7 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;height:3px;
 .value p{color:var(--text2);font-size:15px}
 
 /* ── Products ── */
-.products{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
 .product{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);
   border-radius:var(--radius);overflow:hidden;transition:transform .15s,box-shadow .15s}
 .product:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--accent) 40%,var(--border))}
