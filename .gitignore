@@ -1,0 +1,4 @@
+# ITVR RDP app builds are 109-152 MB each. GitHub rejects pushed files over 100 MB,
+# so they live in assets/ on the web server only and are never committed.
+assets/ITVR-RDP-*.exe
+assets/ITVR-RDP-*.zip
